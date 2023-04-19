@@ -1,21 +1,20 @@
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
 vim.wo.number = true
-vim.wo.relativenumber = true
+vim.wo.relativenumber =flase
 -- 高亮所在行
 vim.wo.cursorline = true
 -- jk移动时光标上下方保留8行
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
+vim.opt.scrolloff = 2
+vim.opt.sidescrolloff = 2
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 缩进2个空格等于一个tab
-vim.o.tabstop = 2
-vim.bo.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftround = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 -- 新行对齐当前行，空格替代tab
-vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.o.autoindent = true
 vim.bo.autoindent = true
@@ -32,7 +31,7 @@ vim.o.incsearch = true
 -- 使用增强状态栏后不需要vim的模式提示
 vim.o.showmode = false
 -- 命令行高为2，提供足够的显示空间
-vim.o.cmdheight = 2
+vim.o.cmdheight = 1
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true
@@ -58,3 +57,5 @@ vim.opt.termguicolors = true
 vim.o.wildmenu = true
 -- always show tabline
 vim.o.showtabline = 2
+vim.o.showmatch = true
+

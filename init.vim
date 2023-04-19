@@ -8,3 +8,12 @@ lua require('plugins')
 lua require('theme/nightfox')
 set background=dark
 
+" 插件配置
+lua require('plugin-config/nvim-treesitter')
+lua require('plugin-config/lualine')
+
+" 退出时修改光标形状
+if $TERM_PROGRAM =~ "iTerm"
+  " reset cursor when vim exits
+  au VimLeave * set guicursor=a:ver25-blinkon0
+endif
