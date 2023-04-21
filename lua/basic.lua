@@ -3,7 +3,7 @@ vim.o.fileencoding = "utf-8"
 vim.wo.number = true
 vim.wo.relativenumber =flase
 -- 高亮所在行
-vim.wo.cursorline = true
+-- vim.wo.cursorline = true
 -- jk移动时光标上下方保留8行
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 2

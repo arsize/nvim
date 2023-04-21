@@ -11,6 +11,9 @@ set background=dark
 " 插件配置
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/lualine')
+lua require('plugin-config/blankline')
+lua require('lsp/setup')
+lua require('plugin-config/cmp')
 
 " 退出时修改光标形状
 if $TERM_PROGRAM =~ "iTerm"
