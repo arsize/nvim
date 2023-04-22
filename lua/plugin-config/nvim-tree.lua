@@ -1,6 +1,6 @@
 require'nvim-tree'.setup{
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     custom = {".git"}
   },
   -- 不显示git状态图标

@@ -1,12 +1,14 @@
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
 vim.wo.number = true
-vim.wo.relativenumber =flase
+vim.wo.relativenumber = false
 -- 高亮所在行
 -- vim.wo.cursorline = true
 -- jk移动时光标上下方保留8行
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 2
+vim.opt.timeoutlen = 500
+vim.opt.updatetime = 100
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 缩进2个空格等于一个tab

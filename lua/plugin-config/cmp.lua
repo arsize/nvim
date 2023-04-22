@@ -4,7 +4,11 @@ cmp.setup({
   -- 设置代码片段引擎，用于根据代码片段补全
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      local luasnip = require("luasnip")
+      if not luasnip then
+        return
+      end
+      luasnip.lsp_expand(args.body)
     end,
   },
 
@@ -38,7 +42,7 @@ cmp.setup({
   -- 补全来源
   sources = cmp.config.sources({
     {name = 'nvim_lsp'},
-    {name = 'vsnip'},
+    {name = 'luasnip'},
     {name = 'buffer'},
     {name = 'path'}
   }),

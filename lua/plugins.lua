@@ -46,8 +46,23 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/nvim-cmp'}
-  use {'L3MON4D3/LuaSnip'}
+  use {'L3MON4D3/LuaSnip',
+    after = 'nvim-cmp',
+    config = function() require('plugin-config.snippets') end,
+  }
   use {'saadparwaiz1/cmp_luasnip'}
+  use {'rafamadriz/friendly-snippets'}
+  -- dashbord
+  use {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        theme = 'hyper',
+      }
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
+  }
   -- lspkind
   use {'onsails/lspkind-nvim'}
   -- lsp ui 美化
