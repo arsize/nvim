@@ -15,11 +15,9 @@ require("mason-lspconfig").setup({
   -- 确保安装，根据需要填写
   ensure_installed = {
     "tsserver",
-    "tailwindcss",
     "bashls",
     "cssls",
     "dockerls",
-    "emmet_ls",
     "html",
     "jsonls",
     "pyright",
@@ -27,11 +25,14 @@ require("mason-lspconfig").setup({
     "taplo",
     "yamlls",
     "gopls",
+    "volar"
   },
 })
 
 -- 一定要在前面先加载上
 local lspconfig = require('lspconfig')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("mason-lspconfig").setup_handlers({
   function (server_name)
@@ -61,5 +62,19 @@ require("mason-lspconfig").setup_handlers({
         }
       }
     }
+  end,
+  ["emmet_ls"] = function ()
+    lspconfig.emmet_ls.setup({
+      capabilities = capabilities,
+      filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact" },
+      init_options = {
+        html = {
+          options = {
+            -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+            ["bem.enabled"] = true,
+          },
+        },
+      }
+    })
   end,
 })
