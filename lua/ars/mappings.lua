@@ -4,6 +4,7 @@ local opt = {
 	silent = true,
 }
 
+-- normal
 map("i", "jj", "<Esc>", opt)
 map("n", "ss", ":w<CR>", opt)
 map("n", "<c-a>", "ggVG", opt)
@@ -11,13 +12,16 @@ map("n", "<leader>e", ":NvimTreeToggle<CR>", opt)
 map("n", "q", ":q!<CR>", opt)
 map("n", "<c-n>", ":nohl<CR>", opt)
 
+-- telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>fs", builtin.current_buffer_fuzzy_find, {})
+map("n", "<leader>fm", ":Telescope bookmarks list<CR>", opt)
 
+-- Lspsaga
 map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opt)
 map("n", "gh", "<cmd>Lspsaga finder<CR>", opt)
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opt)

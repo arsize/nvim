@@ -34,6 +34,21 @@ return {
 				},
 				typescriptreact = {
 					require("formatter.filetypes.typescriptreact").prettier
+				},
+				javascript = {
+					require("formatter.filetypes.javascript").prettier
+				},
+				javascriptreact = {
+					require("formatter.filetypes.javascriptreact").prettier
+				},
+				html = {
+					require("formatter.filetypes.html").prettier
+				},
+				typescript = {
+					require("formatter.filetypes.typescript").prettier
+				},
+				json = {
+					require("formatter.filetypes.json").prettier
 				}
 			},
 		})

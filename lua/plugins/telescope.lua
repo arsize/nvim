@@ -6,7 +6,9 @@ return {
 		if not status then
 			return
 		end
-		require("telescope").setup({
+		local t = require("telescope")
+		t.load_extension("bookmarks")
+		t.setup({
 			defaults = {
 				-- Default configuration for telescope goes here:
 				-- config_key = value,
