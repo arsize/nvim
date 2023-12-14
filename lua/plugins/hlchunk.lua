@@ -6,7 +6,7 @@ return {
 			chunk = {
 				style = {
 					{ fg = "#806d9c" },
-					{ fg = "#c21f30" }, -- this fg is used to highlight wrong chunk
+					{ fg = "#CC7375" }, -- this fg is used to highlight wrong chunk
 				},
 			},
 			line_num = {

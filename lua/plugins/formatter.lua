@@ -1,7 +1,7 @@
 return {
 	"mhartington/formatter.nvim",
 	config = function()
-		local util = require "formatter.util"
+		local util = require("formatter.util")
 		require("formatter").setup({
 			logging = false,
 			filetype = {
@@ -33,23 +33,23 @@ return {
 					end,
 				},
 				typescriptreact = {
-					require("formatter.filetypes.typescriptreact").prettier
+					require("formatter.filetypes.typescriptreact").prettier,
 				},
 				javascript = {
-					require("formatter.filetypes.javascript").prettier
+					require("formatter.filetypes.javascript").prettier,
 				},
 				javascriptreact = {
-					require("formatter.filetypes.javascriptreact").prettier
+					require("formatter.filetypes.javascriptreact").prettier,
 				},
 				html = {
-					require("formatter.filetypes.html").prettier
+					require("formatter.filetypes.html").prettier,
 				},
 				typescript = {
-					require("formatter.filetypes.typescript").prettier
+					require("formatter.filetypes.typescript").prettier,
 				},
 				json = {
-					require("formatter.filetypes.json").prettier
-				}
+					require("formatter.filetypes.json").prettier,
+				},
 			},
 		})
 	end,

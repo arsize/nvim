@@ -25,7 +25,7 @@ map("n", "<leader>fm", ":Telescope bookmarks list<CR>", opt)
 map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opt)
 map("n", "gh", "<cmd>Lspsaga finder<CR>", opt)
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opt)
-map("n", "tm", "<cmd>Lspsaga term_toggle<CR>", opt)
+map("n", "tk", "<cmd>Lspsaga term_toggle<CR>", opt)
 map("n", "tl", "<cmd>Lspsaga outline<CR>", opt)
 map("n", "tp", "<cmd>Lspsaga code_action<CR>", opt)
 

@@ -19,7 +19,7 @@ return {
 						-- e.g. git_{create, delete, ...}_branch for the git_branches picker
 						["<C-h>"] = "which_key",
 						["q"] = actions.close,
-						["l"] = actions.file_edit,
+						-- ["l"] = actions.file_edit,
 					},
 				},
 				file_ignore_patterns = { "node_modules", "vendor" },
