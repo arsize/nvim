@@ -50,6 +50,9 @@ return {
 				json = {
 					require("formatter.filetypes.json").prettier,
 				},
+				dart = {
+					require("formatter.filetypes.dart").dartformat
+				}
 			},
 		})
 	end,
